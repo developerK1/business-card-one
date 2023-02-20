@@ -1,0 +1,729 @@
+/*=================================================
+			DEFAULT PAGE STYLES	
+==================================================*/
+*{
+	margin : 0px;
+	padding : 0px;
+}
+.centerfy,
+.centerfy-col {
+	display :flex;
+	justify-content :center;
+	align-items :center;
+}
+.centerfy-col {
+	flex-direction : column;
+}
+main {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #e3e3e3;
+    padding: 1% 2%;
+	display :flex;
+	flex-wrap : wrap;
+	justify-content :center;
+}
+/*=================================================
+			DEFAULT CARD STYLES	
+==================================================*/
+.card-wrapper {
+    width: 460px;
+    height: 280px;
+    box-shadow: 7px 12px 8px 2px #0000005e;
+	margin : 15px;
+}
+.card {
+    transform-style: flat;
+    position: absolute;
+    transform-style: preserve-3d;
+	width : 460px;
+	height : 280px;
+}
+aside {
+	width : 100%;
+	height : 100%;
+}
+.card .front {
+position : absolute;
+top:0px;
+left : 0px;
+backface-visibility : hidden;
+transform : rotateY(0deg);
+transition : 0.5s;
+ /*DONT FORGET TO FIX HERE*/
+ /*display : none !important;DONT FORGET TO FIX HERE*/
+}
+
+.card:hover  .front {
+	transform : rotateY(180deg);
+	
+}
+
+.card .back {
+position : absolute;
+top : 0px;
+left : 0px;
+backface-visibility : hidden;
+transform : rotateY(180deg);/*DONT FORGET TO FIX HERE*/
+transition : 0.5s;
+}
+/*=================================================
+			HOVER FOCUS ACTIVE STATES	
+==================================================*/
+.card:hover  .back {
+	transform : rotateY(0deg);
+/*DONT FORGET TO FIX HERE*/
+}
+/*=================================================
+			CARD ONE	
+==================================================*/
+#card-one .front {
+    background-color: #17223e;
+    color: #fafafa;
+    letter-spacing: 1px;
+}
+#card-one .front .design {
+    height: 10vh;
+    width: 80%;
+    box-shadow: 0px 0px 3px 2px #775cb0;
+    position: relative;
+    background-image: linear-gradient(to right, #1b6380, #35c4ff,#1b5c76);
+    transform: rotateX(54deg);
+}
+.front .name-tag {
+    height: 23vh;
+    width: 100%;
+	transform : translateY(10px);
+}
+ .front .name-tag p {
+	line-height : 24px;
+}
+ .front .name-tag h4 {
+	line-height : 17px
+}
+#card-one .front .design div {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 10vh;
+    box-shadow: 0px 0px 3px 5px #2b1d4a;
+}
+#card-one .front .design div:nth-child(1){ 
+    width: 83%;
+}
+#card-one .front .design div:nth-child(2){
+    width: 66%;
+}
+/*================================================= */
+#card-one .back {
+	background-color: white;
+	display :flex;
+	justify-content : flex-end;
+}
+#card-one .back-wrapper {
+    width: 83%;
+    height: 100%;
+    border-radius: 280px 0px 0px 280px;
+    background-color: white;
+}
+#card-one .bg-design  {
+    width: 100%;
+    height: 100%;
+    border-radius: 280px 0px 0px 280px;
+    background-color: #17223e;
+	position :relative;
+}
+#card-one .back-wrapper article {
+	display :flex;
+	justify-content : space-evenly;
+}
+#card-one .back-wrapper .circles {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: linear-gradient(-45deg, #1b6380, #35c4ff,#1b5c76);
+    position: absolute;
+    top: 50%;
+    left: -67px;
+    transform: translateY(-50%);
+	display :flex;
+}
+#card-one .back-wrapper .inner-circle {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: url("imgs/logo.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+    border: 5px solid #000000a3;
+}
+
+#card-one .back .heading {
+    position: absolute;
+    top: 42px;
+    left: 29.89px;
+    background-color: #30a9da;
+    width: 92%;
+    height: 11vh;
+    text-align: center;
+    display: flex;
+}
+#card-one .back h3 {
+	margin : auto;
+	font-size : 32px;
+	color : white;
+	font-weight : 600;
+}
+#card-one .content {
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    color: #e6dddd;
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 300;
+}
+/*=================================================
+			CARD TWO	
+==================================================*/
+#card-two, #card-two .card {
+    width: 448px;
+    height: 278px;
+    box-shadow: 2px 19px 8px 13px #0000005e;
+}
+#card-two .front,
+#card-two .back {
+	width : 448px;
+	height : 280px;
+}
+#card-two .front{
+	background-color :white;
+	font-size : 28px;
+	letter-spacing : 4px;
+	font-weight : 600;
+	border : 8px solid black;
+}
+#card-two .back article {
+	width : 100%;
+	height : 100%;
+	padding : 3% 1%;
+	background-color :black;
+	color :#ffffffd9;
+}
+#card-two .back article aside {
+	width : 48%;
+	height : 100%;
+	justify-content : space-around;
+}
+
+#card-two .back article .content {
+	align-items :flex-start;
+}
+#card-two .back .circle {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 5px solid #af9f9f;
+    transform: rotate(45deg);
+    display: flex;
+}
+#card-two .back .circle h2 {
+	margin : auto;
+}
+#card-two .back .heading h6 {
+    font-size: 23px;
+    letter-spacing: 1px;
+    text-align: center;
+    font-weight: 300;
+	margin-bottom : 5px;
+}
+#card-two .back .heading p {
+    font-size: 12px;
+    text-align: center;
+    line-height: 15px;
+}
+/*=================================================
+			CARD THREE	
+==================================================*/
+#card-three .front {
+	position : relative;
+	overflow : hidden;
+	background-color : white;
+	color :black;
+}
+#card-three .front .designs{
+	height: 140px;
+	width : 200px;
+	position : absolute;
+	display :flex;
+}
+
+#card-three .front .designs div {
+	width : 50%;
+	height : 100%;
+}
+#card-three .front .one .top, 
+#card-three .front .two .top {
+    background-color: #26b3c3;
+}
+#card-three .front .one .bottom,
+#card-three .front .two .bottom{
+	background-color : #0d1f3f;
+}
+
+#card-three .front .one {
+    top: 0px;
+    left: 0px;
+    transform: translate(-58px,-27px) rotate(319deg);
+    z-index: -100;
+}
+#card-three .front .two {
+    bottom: 0px;
+    right: 0px;
+    transform: translate(80px,27px) rotate(-45deg);
+    z-index: -100;
+}
+#card-three .front  .one .bottom,
+#card-three .front .two .top{
+ transform: translateY(-26px);
+}
+#card-three .front .two .bottom {
+	z-index : 200;
+	box-shadow : 2px 2px 2px black;
+}
+#card-three .front .one .top {
+    z-index: 200;
+    box-shadow: -8px -1px 10px black;
+}
+#card-three .back .detials {
+    height: 264px;
+    width: 285px;
+    position: relative;
+    bottom: -20px;
+    display: flex !important;
+    transform-origin: bottom right;
+    transform: rotate(33deg) translate(82px, -40px);
+	z-index : -100;
+}
+#card-three .back .text {
+	height: 100%;
+    width:230px;
+	color :#e6e6e6;
+	background-color: #0d1f3f;	
+}
+#card-three .back .text .wrapper {
+    transform: rotate(-33deg);
+    height: 100%;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+	position : relative;
+	overflow : hidden;
+}
+#card-three .back .text article {
+    margin: 10px 0px 54px 0px;
+	overflow : hidden;
+}
+#card-three .back .text article .centerfy {
+	width : 100%;
+	justify-content : space-evenly;
+}
+#card-three .back .text aside {
+    height: 50px !important;
+    margin: 56px 0px 10px 0px;
+}
+#card-three .back .icon {
+    height: 100%;
+    width: 50px;
+    background-color:  #26b3c3;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+	transform : translateY(-11px);
+}
+#card-three .back .icon img {
+	transform : rotate(-33deg);
+	margin : 20px;
+}
+#card-three .card {
+	overflow : hidden;
+}
+#card-three .back .right-blue-decor {
+    width: 70px;
+    height: 70px;
+    background-color: #26b3c3;
+    position: absolute;
+    right: -41px;
+    top: 89px;
+    transform: rotate(35deg);
+}
+#card-three .busines-name {
+    width: 100%;
+    height: 20vh;
+    position: relative;
+    bottom: 10px;
+    z-index: -100;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    transform: translate(24px,-137px);
+}
+#card-three .busines-name .centerfy-col {
+	z-index : -100;
+}
+#card-three .below-blue-decor {
+    width: 124px;
+    height: 100px;
+    background-color: #26b3c3;
+    transform: rotate(33deg) translate(121px, 46px);
+    position: absolute;
+    z-index: -100;
+}
+#card-three .back {
+	background-color : white;
+}
+#card-three .back .musk {
+	position :absolute;
+	height : 100%;
+	width : 100%;
+}
+#card-three .back .top-left-decor {
+    background-color: #26b3c3;
+    height: 200px;
+    width: 100px;
+    left: -10px;
+    transform: rotate(37deg) translateX(-80px);
+}
+/*=================================================
+			CARD FOUR	
+==================================================*/
+#card-four .front,
+#card-four .back {
+	background-color :red;
+	display :flex;
+}
+#card-four .inner {
+    width: 99%;
+    height: 100%;
+    border-radius: 30% 0% 30% 0%;
+    background-color: #151414;
+    box-shadow: 1px 0px 10px 4px black;
+    margin: auto;
+    color: white;
+}
+#card-four .back .inner aside {
+	justify-content : space-around;
+	width : 65%;
+	height : 100%;
+}
+#card-four .back article {
+	width : 34%;
+	height : 100%;
+}	
+#card-four .line-divider-red {
+	width : 1%;
+	height : 94%;
+	border-radius : 3px;
+	margin : auto 0px;
+	background-color :red;
+}
+/*=================================================
+			CARD FIVE	
+==================================================*/
+#card-five .org-text {
+    font-weight: 800;
+    color: #ff5722;
+	margin-top : 8px;
+	text-shadow : 1px 1px 1px black;
+}
+#card-five .back .b-naming {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 35%;
+}
+#card-five .back .b-naming div {
+	align-items :flex-start;
+}
+#card-five .back .b-naming:nth-child(1) aside{
+	text-align :left;
+}
+
+#card-five .back .details {
+	width : 460px;
+	height : 65%;
+	display :flex;
+}
+#card-five .back .details aside {
+	width : 40%;
+	height : 100%;	
+}
+#card-five .back .details article aside  {
+	width : 100%;
+	height : 100%;
+	justify-content : space-evenly;
+	color :white;
+}
+#card-five .back .details a {
+	color :white;
+}
+#card-five .back .icons {
+	width : 60%;
+	height : 100%;
+
+	position :relative;
+}
+#card-five .icons .overlays {
+    width: 480px;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    position: absolute;
+    top: 0px;
+    left: -81px;
+    z-index: -100;
+    overflow: hidden;
+}
+#card-five .icons .musk {
+	width: 43.1%;
+    height: 300px;
+    background-color: #ff5722;
+}
+#card-five .icons .musk:nth-child(1) {
+    width: 150px;
+    height: 353px;
+    height: 319px;
+    transform: rotate(27deg) translate(18px,-100px);
+    box-shadow: -3px 6px 5px #272222;
+}
+#card-five .back .details .text {
+    background-color: #1f1a1a;
+    width: 100%;
+    height: 11vh;
+    z-index: -100;
+    color: white;
+    padding-left: 9%;
+	align-items : flex-start;
+}
+#card-five .back .details .text p {
+	color :#ff5722;
+	font-weight : 700;
+	font-size : 11px;
+}
+#card-five .back .barcode {
+	display :flex;
+	justify-content :flex-end;
+}
+#card-five .back,
+#card-five .front {
+	background-color:white;
+}
+#card-five .front {
+	padding : 1% 0% 1% 1%;
+	overflow : hidden;
+}
+#card-five .front article {
+	height : 15vh;
+}
+#card-five .front article:nth-child(1){
+	align-items : center;
+	width : 41%;
+	margin-right : 3%;
+}
+#card-five .front article:nth-child(1) .centerfy-col {
+    align-items: flex-start;
+    text-align: left;
+    height: 100%;
+}
+#card-five .front article:nth-child(2) {
+    background-color: #1f1a1a;
+    width: 55%;
+    box-shadow: -1px 4px 5px black;
+	justify-content : space-evenly;
+	color :white;
+}
+#card-five .front article:nth-child(2) .centerfy {
+	justify-content :space-around;	
+	width : 100%;
+}
+#card-five .front .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -50;
+    display: flex;
+    justify-content: space-between;
+    transform: rotate(12deg);
+}
+#card-five .front .overlay .grey {
+    height: 100%;
+    background-color: #1f1a1a;
+    width: 50px;
+    transform: translate(-41px, -22px);
+}
+#card-five .front .overlay .orange {
+    height: 330px;
+    background-color: #ff5722;
+    width: 182px;
+    transform: translate(58px, -47px);
+}
+#card-five .card h3 {
+    font-weight: 900;
+    font-family: castellar;
+    letter-spacing: 1.5px;
+}
+/*=================================================
+			CARD FIVE	
+==================================================*/
+#card-six .front {
+	background-color : white;
+	overflow : hidden;
+	position :relative;
+}
+#card-six .back {
+	background-color : #0d0b0b;
+	overflow : hidden;
+}
+#card-six .front .centerfy {
+	height : 100%;
+	width : 100%;
+}
+#card-six .front div aside:nth-child(1){
+	height : 100%;
+	width : 45%;
+}
+#card-six .front div aside:nth-child(2){
+	height : 100%;
+	width : 65%;
+	
+} 
+#card-six .front .musk {
+    height: 400px;
+    width: 396px;
+    background-color: black;
+    right: 0px;
+    transform: skewX(333deg) translateX(154px);
+    position: absolute;
+}
+#card-six .front .musk aside {
+    height: 188px !important;
+    transform: translate(-27px, 106px);
+	color : white !important;
+}
+#card-six .front .musk aside .centerfy {
+	width: 100%;
+	justify-content : space-between;
+}
+#card-six .front .musk aside .centerfy p {
+	transform: skewX(-333deg);
+}
+#card-six article:nth-child(1) {
+    color: white;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+#card-six article:nth-child(1) div {
+    width: 49%;
+    height: 9vh;
+    margin: 20px 0px;
+}
+#card-six .back .musk {
+    background-color: #0d0b0b;
+    height: 100%;
+    width: 50%;
+    right: 0px;
+    transform: skewX(347deg) translateX(52px);
+    position: absolute;
+}
+#card-six .back .musk .darkblue {
+	height : 175px;
+	width : 60px;
+	background-color : #0a2736;
+} 
+#card-six .back .musk .white {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+#card-six .back h4 {
+	letter-spacing : 4px;
+}
+
+#card-six .back .text {
+	letter-spacing : 3px;
+	 font-weight: 200;
+    color: #bfb5b5;
+	font-style : italic;
+}
+#card-six .back .realtytxt {
+    letter-spacing: 1px;
+    font-weight: 200;
+    color: #bfb5b5;
+}
+/*=================================================
+			imgages	
+==================================================*/
+.logo {
+	width : 90px;
+	height : 90px;
+	margin : 8px;
+	border-radius : 50%;
+}
+.person {
+	width : 150px;
+	height : 150px;
+	border-radius : 50%;
+}
+#card-three .back .logo {
+	width : 65px;
+	height : 65px;
+}
+.social {
+	width :18px;
+	height : 18px;
+}
+.icons img {
+	width : 30px;
+	height : 30px;
+	margin-right : 5px;
+}
+
+#card-six .icons img {
+	background-color : white;
+	width : 50px;
+	height : 30px;
+}
+#card-six .back .musk .white img {
+    transform: translateX(41px) skew(14deg);
+}
+#card-two .barcode {
+    width: 110px;
+    height: 90px;
+}
+#card-five .logo {
+	width : 60px;
+	height : 60px;
+}
+#card-four .logo {
+    width: 323px;
+    height: 209px;
+    margin-bottom: -57px;
+    margin-top: -52px;
+}
+
+/* WORKING WITH BACK OF THE CLASS ADD_ON CLASS */
+.curent-side {
+	z-index : 300;
+	transform : rotateY(180deg);
+}
